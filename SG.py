@@ -1,5 +1,9 @@
 import tkinter as tk 
 from tkinter import filedialog 
+import Listas.ListaSistemas as lista
+
+list = lista.lista_sistemas()
+
 
 def showMenu():
     while True:
@@ -8,12 +12,8 @@ def showMenu():
         print("-------------------------------------------------")
         print("# Menu Principal\n")
         print("1. Cargar archivo")
-        print("2. Procesar archivo salida")
-        print("3. Escribir archivo salida")
-        print("4. Mostrar datos del estudiante")
-        print("5. Generar grafica")
-        print("6. inicializar sistema")
-        print("7. Salida\n")
+        print("2. Ver sistemas")
+        print("3. Salida\n")
 
         try:
             option = int(input("Ingrese una opción: "))

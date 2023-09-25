@@ -32,7 +32,6 @@ class lista_Alturas:
                 actual.Altura._altura,
                 " Letra: ",
                 actual.Altura._letra,
-                " Altura: "
             )
             actual = actual.siguiente
         print(
@@ -40,4 +39,5 @@ class lista_Alturas:
         )
 
 
-    
+    def borrarTodos(self):
+        self.primero = None

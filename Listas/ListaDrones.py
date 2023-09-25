@@ -37,7 +37,7 @@ class lista_drones:
                 " Estado: ",
                 actual.Dron._estado,
             )
-            actual.Sistemas._listadoAlturas.recorrer()
+            actual.Dron._listadoAlturas.recorrer()
             actual = actual.siguiente
         print(
             "----------------------------------------------------------------------------"
