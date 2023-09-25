@@ -20,6 +20,7 @@ def leerEntrada(xml_file):
         listaDrones = lista_drones.lista_drones()
         if child.tag == "listaDrones":
             for dron in child:
+
                 dron_obj = Dron("", dron.text, 0, "Espera", listaAlturas)
                 listaDrones.insertar(dron_obj)
                 print(dron.text)

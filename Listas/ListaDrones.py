@@ -37,12 +37,15 @@ class lista_drones:
                 " Estado: ",
                 actual.Dron._estado,
             )
-            actual.Dron._listadoAlturas.recorrer()
+            if actual.Dron._listadoAlturas != None:
+                actual.Dron._listadoAlturas.recorrer()
             actual = actual.siguiente
         print(
             "----------------------------------------------------------------------------"
         )
 
+
+## Cambiar el listado de alturas de un dron
     def cambiarListAlturas(self, nombre, listAlturas):
         actual = self.primero
         while actual != None:
