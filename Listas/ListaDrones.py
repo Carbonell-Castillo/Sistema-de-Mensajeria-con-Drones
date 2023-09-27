@@ -43,7 +43,9 @@ class lista_drones:
         print(
             "----------------------------------------------------------------------------"
         )
-
+    
+    
+    
 
 ## Cambiar el listado de alturas de un dron
     def cambiarListAlturas(self, nombre, listAlturas):
@@ -53,6 +55,15 @@ class lista_drones:
                 actual.Dron._listadoAlturas=listAlturas
             actual = actual.siguiente
     
+    def instruccion(self, nombre, altura):
+        actual = self.primero
+        while actual != None:
+            if actual.Dron._nombre == nombre:                
+                return actual.Dron._listadoAlturas.obtenerLetraAltura(altura)
+            actual = actual.siguiente
+        return "No se encontro el dron"
+
+
     def validarNombre(self, nombre):
         actual = self.primero
         while actual != None:
@@ -61,5 +72,40 @@ class lista_drones:
             actual = actual.siguiente
         return False
     
+    #obtenerAlturaInicial Dron
+    def obtenerAlturaInicial(self, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Dron._nombre == nombre:
+                return actual.Dron._altura
+            actual = actual.siguiente
+        return "No se encontro el dron"
+    
+    def obtenerCantidadDrones(self):
+        cantidad = 0
+        actual = self.primero
+        while actual != None:
+            cantidad += 1
+            actual = actual.siguiente
+        return cantidad
+
+    ##funcion para obtener dron por indice
+    def obtenerDronPorIndice(self, indice):
+        actual = self.primero
+        contador = 0
+        while actual != None:
+            if contador == indice:
+                return actual.Dron._nombre
+            contador += 1
+            actual = actual.siguiente
+        return "nop222"
+    ##actualizar Altura
+    def actualizarAltura(self, nombre, altura):
+        actual = self.primero
+        while actual != None:
+            if actual.Dron._nombre == nombre:
+                actual.Dron._altura=altura
+            actual = actual.siguiente
+
     def borrarTodos(self):
         self.primero = None

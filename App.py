@@ -19,10 +19,14 @@ if __name__ == "__main__":
         elif option == 2:
             print("Comienza a mostrar todo")    
             print("")
+            
             sg.list.recorrer()
         
-
-        elif option == 3:
+        elif option ==3:
+            print("Comienza a mostrar todo")    
+            print("")
+            sg.listMensajes.recorrer()
+        elif option == 4:
             print("Saliendo...")
             break
         else:

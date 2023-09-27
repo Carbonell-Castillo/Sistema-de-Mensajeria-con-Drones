@@ -1,50 +1,54 @@
-from Altura import Altura
+from Mensaje import Mensaje
 
 
 class nodo:
-    def __init__(self, Altura=None, siguiente=None):
-        self.Altura = Altura
+    def __init__(self, Mensaje=None, siguiente=None):
+        self.Mensaje = Mensaje
         self.siguiente = siguiente
 
 
-class lista_Alturas:
+class lista_Mensajes:
     def __init__(self):
         self.primero = None
 
-    def insertar(self, Altura):
+    def insertar(self, Mensaje):
         if self.primero is None:
-            self.primero = nodo(Altura=Altura)
+            self.primero = nodo(Mensaje=Mensaje)
             return
         actual = self.primero
         while actual.siguiente:
             actual = actual.siguiente
-        actual.siguiente = nodo(Altura=Altura)
+        actual.siguiente = nodo(Mensaje=Mensaje)
 
     def recorrer(self):
         actual = self.primero
-        print("-- Alturas Dron--- \n")
+        print("Mensajes: \n")
         print(
             "----------------------------------------------------------------------------"
         )
         while actual != None:
             print(
-                "Altura: ",
-                actual.Altura._altura,
-                " Letra: ",
-                actual.Altura._letra,
+                " Nombre: ",
+                actual.Mensaje._nombre,
+                " nombre Sistemas drones: ",
+                actual.Mensaje._nombreSistemaDrones,
             )
+            if actual.Mensaje._instrucciones != None:
+                actual.Mensaje._instrucciones.ordenar()
+                actual.Mensaje._instrucciones.recorrer()
             actual = actual.siguiente
         print(
             "----------------------------------------------------------------------------"
         )
 
-    def obtenerLetraAltura(self, altura):
+
+    def validarNombre(self, nombre):
         actual = self.primero
         while actual != None:
-            if actual.Altura._altura == altura:
-                return actual.Altura._letra
+            if actual.Mensaje._nombre == nombre:
+                return True
             actual = actual.siguiente
-        return None
+        return False
     
     def borrarTodos(self):
         self.primero = None

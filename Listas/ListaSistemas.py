@@ -60,5 +60,50 @@ class lista_sistemas:
             actual = actual.siguiente
         return False
     
+
+    def obtenerCantidadDrones(self, nombreSistema):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                return actual.Sistemas._listadoDrones.obtenerCantidadDrones()
+            actual = actual.siguiente
+        return 0
+    
+    ##obtener dron por indice
+    def obtenerDronIndice(self, nombreSistema, indice):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                return actual.Sistemas._listadoDrones.obtenerDronPorIndice(indice)
+            actual = actual.siguiente
+        return "Nop"
+    
+    
     def borrarTodos(self):
         self.primero = None
+
+    def instruccionDron(self, nombreSistema, nombreDron, altura):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                return actual.Sistemas._listadoDrones.instruccion(nombreDron, altura)
+            actual = actual.siguiente
+        return "No se encontro el sistema"
+
+    ##obtener altura inicial dron
+    def obtenerAlturaInicial(self, nombreSistema, nombreDron):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                return actual.Sistemas._listadoDrones.obtenerAlturaInicial(nombreDron)
+            actual = actual.siguiente
+        return "No se encontro el sistema"
+    
+    ##actualizar altura
+    def actualizarAltura(self, nombreSistema, nombreDron, altura):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                return actual.Sistemas._listadoDrones.actualizarAltura(nombreDron, altura)
+            actual = actual.siguiente
+        return "No se encontro el sistema"

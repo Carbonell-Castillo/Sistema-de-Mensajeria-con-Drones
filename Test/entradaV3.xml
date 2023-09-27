@@ -48,7 +48,7 @@
             </alturas>
          </contenido>
       </sistemaDrones>
-      <sistemaDrones nombre="SDF">
+      <sistemaDrones nombre="SD1">
          <alturaMaxima>1</alturaMaxima>
          <cantidadDrones>4</cantidadDrones>
          <contenido>
