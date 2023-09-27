@@ -26,7 +26,11 @@ if __name__ == "__main__":
             print("Comienza a mostrar todo")    
             print("")
             sg.listMensajes.recorrer()
-        elif option == 4:
+        elif option ==4:
+            print("Comienza a escribir salida")    
+            print("")
+            logic.generarArchivoSalida()
+        elif option == 5:
             print("Saliendo...")
             break
         else:

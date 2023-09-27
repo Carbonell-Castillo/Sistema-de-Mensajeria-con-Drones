@@ -58,6 +58,15 @@ class lista_Instrucciones:
                 siguiente = siguiente.siguiente
             actual = actual.siguiente
     
+    ##validar si en un timpo t el estado esta "Emitir luz"
+    def validarEstado(self, tiempo):
+        actual = self.primero
+        while actual != None:
+            if actual.Instruccion._tiempo == tiempo and actual.Instruccion._estado == "Emitir Luz":
+                print("El dron: ", actual.Instruccion._nombreDron, " emitio luz en el tiempo: ", tiempo)
+                return True
+            actual = actual.siguiente
+        return False
     
     ##Funcion para obtener el tiempo mayor de todos los registros
     def obtenerTiempoMayor(self):
@@ -81,7 +90,27 @@ class lista_Instrucciones:
             actual = actual.siguiente
         return ultimo_dron
 
+    #obtenerCantidadInstrucciones
+    def obtenerCantidadInstrucciones(self):
+        cantidad = 0
+        actual = self.primero
+        while actual != None:
+            cantidad += 1
+            actual = actual.siguiente
+        return cantidad
 
+    #obtener instruccion indice y que el _tiempo sea igual
+    def obtenerInstruccionIndice(self, indice, tiempo):
+        actual = self.primero
+        contador = 0
+        while actual != None:
+            if contador == indice and actual.Instruccion._tiempo == tiempo:
+                return actual.Instruccion
+            contador += 1
+            actual = actual.siguiente
+        return None
+
+    
     
     def borrarTodos(self):
         self.primero = None

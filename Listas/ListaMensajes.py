@@ -32,6 +32,10 @@ class lista_Mensajes:
                 actual.Mensaje._nombre,
                 " nombre Sistemas drones: ",
                 actual.Mensaje._nombreSistemaDrones,
+                " tiempo optimo: ",
+                actual.Mensaje._tiempoOptimo,
+                " mensaje recibido: ",
+                actual.Mensaje._mensajeRecibido
             )
             if actual.Mensaje._instrucciones != None:
                 actual.Mensaje._instrucciones.ordenar()
@@ -49,6 +53,25 @@ class lista_Mensajes:
                 return True
             actual = actual.siguiente
         return False
-    
+    #obtenerCantidadMensajes
+    def obtenerCantidadMensajes(self):
+        actual = self.primero
+        contador = 0
+        while actual != None:
+            contador = contador + 1
+            actual = actual.siguiente
+        return contador
+
+    #obtenerMensajeIndice
+    def obtenerMensajeIndice(self, indice):
+        actual = self.primero
+        contador = 0
+        while actual != None:
+            if contador == indice:
+                return actual.Mensaje
+            contador = contador + 1
+            actual = actual.siguiente
+        return None
+
     def borrarTodos(self):
         self.primero = None

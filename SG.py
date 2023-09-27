@@ -16,7 +16,8 @@ def showMenu():
         print("1. Cargar archivo")
         print("2. Ver sistemas")
         print("3. Ver mensajes")
-        print("4. Salida\n")
+        print("4. Archivo salida")
+        print("5. Salida\n")
 
         try:
             option = int(input("Ingrese una opción: "))
