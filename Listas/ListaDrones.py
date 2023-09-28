@@ -72,6 +72,21 @@ class lista_drones:
             actual = actual.siguiente
         return False
     
+
+    #ordenar drones alfabeticamente
+    def ordenarDrones(self):
+        actual = self.primero
+        while actual != None:
+            actual2 = self.primero
+            while actual2 != None:
+                if actual.Dron._nombre < actual2.Dron._nombre:
+                    aux = actual.Dron
+                    actual.Dron = actual2.Dron
+                    actual2.Dron = aux
+                actual2 = actual2.siguiente
+            actual = actual.siguiente
+
+            
     #obtenerAlturaInicial Dron
     def obtenerAlturaInicial(self, nombre):
         actual = self.primero

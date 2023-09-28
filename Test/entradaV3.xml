@@ -48,7 +48,7 @@
             </alturas>
          </contenido>
       </sistemaDrones>
-      <sistemaDrones nombre="SD1">
+      <sistemaDrones nombre="SDF">
          <alturaMaxima>1</alturaMaxima>
          <cantidadDrones>4</cantidadDrones>
          <contenido>
@@ -64,7 +64,7 @@
             </alturas>
          </contenido>
          <contenido>
-            <dron>DronY</dron>
+            <dron>DronA</dron>
             <alturas>
                <altura valor="1">C</altura>
             </alturas>
@@ -92,7 +92,7 @@
          <instrucciones>
             <instruccion dron="DronW">1</instruccion>
             <instruccion dron="DronX">1</instruccion>
-            <instruccion dron="DronY">1</instruccion>
+            <instruccion dron="DronA">1</instruccion>
             <instruccion dron="DronZ">1</instruccion>
          </instrucciones>
       </Mensaje>

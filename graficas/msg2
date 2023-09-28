@@ -1,0 +1,66 @@
+// Bruce Castillo 202203069
+digraph {
+	nodo102 [label=msg2]
+	nodo103 [label="Mensaje Recibido: \nIPC2"]
+	nodo104 [label="Tiempo optimo: 5"]
+	nodo102 -> nodo103
+	nodo103 -> nodo104
+	nodo105 [label=DronA]
+	nodo103 -> nodo105
+	nodo106 [label=Subir]
+	nodo105 -> nodo106
+	nodo107 [label=Esperar]
+	nodo106 -> nodo107
+	nodo108 [label=Esperar]
+	nodo107 -> nodo108
+	nodo109 [label="Emitir Luz"]
+	nodo108 -> nodo109
+	nodo110 [label=Espera]
+	nodo109 -> nodo110
+	nodo111 [label=DronW]
+	nodo103 -> nodo111
+	nodo112 [label=Subir]
+	nodo111 -> nodo112
+	nodo113 [label="Emitir Luz"]
+	nodo112 -> nodo113
+	nodo114 [label=Espera]
+	nodo113 -> nodo114
+	nodo115 [label=Espera]
+	nodo114 -> nodo115
+	nodo116 [label=Espera]
+	nodo115 -> nodo116
+	nodo117 [label=DronX]
+	nodo103 -> nodo117
+	nodo118 [label=Subir]
+	nodo117 -> nodo118
+	nodo119 [label=Esperar]
+	nodo118 -> nodo119
+	nodo120 [label="Emitir Luz"]
+	nodo119 -> nodo120
+	nodo121 [label=Espera]
+	nodo120 -> nodo121
+	nodo122 [label=Espera]
+	nodo121 -> nodo122
+	nodo123 [label=DronZ]
+	nodo103 -> nodo123
+	nodo124 [label=Subir]
+	nodo123 -> nodo124
+	nodo125 [label=Esperar]
+	nodo124 -> nodo125
+	nodo126 [label=Esperar]
+	nodo125 -> nodo126
+	nodo127 [label=Esperar]
+	nodo126 -> nodo127
+	nodo128 [label="Emitir Luz"]
+	nodo127 -> nodo128
+	nodo129 [label="Tiempo: 1"]
+	nodo104 -> nodo129
+	nodo130 [label="Tiempo: 2"]
+	nodo129 -> nodo130
+	nodo131 [label="Tiempo: 3"]
+	nodo130 -> nodo131
+	nodo132 [label="Tiempo: 4"]
+	nodo131 -> nodo132
+	nodo133 [label="Tiempo: 5"]
+	nodo132 -> nodo133
+}
