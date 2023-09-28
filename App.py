@@ -30,7 +30,20 @@ if __name__ == "__main__":
             print("Comienza a escribir salida")    
             print("")
             logic.generarArchivoSalida()
-        elif option == 5:
+        elif option ==5:
+            print("Comienza a generar todas las graficas salida")    
+            print("")
+            sg.list.generarGrafica()
+            
+        elif option ==6:
+            print("Comienza a generar graficas por nombre de sistema")    
+            print("")
+            sg.list.generarGraficaSistema("ADF")
+        elif option ==7:
+            print("Comienza a generar graficas por nombre de sistema")    
+            print("")
+            sg.listMensajes.generarGrafica()
+        elif option ==9:
             print("Saliendo...")
             break
         else:

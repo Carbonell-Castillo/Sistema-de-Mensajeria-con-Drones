@@ -220,11 +220,6 @@ def generarArchivoSalida():
                     instruccion_elem = ET.SubElement(acciones_elem, "dron")
                     instruccion_elem.set("nombre", instruccion._nombreDron)
                     instruccion_elem.text = instruccion._estado
-        # for j in range(0, cantidad_instruccion):
-        #     instruccion = mensaje._instrucciones.obtenerInstruccionIndice(j)
-        #     instruccion_elem = ET.SubElement(instrucciones_elem, "instruccion")
-        #     instruccion_elem.set("dron", instruccion._nombreDron)
-        #     instruccion_elem.text = instruccion._estado
 
     tree = ET.ElementTree(root)
     tree.write("salida.xml", encoding="UTF-8", xml_declaration=True)

@@ -78,7 +78,24 @@ class lista_Instrucciones:
             actual = actual.siguiente
         return tiempo_mayor
     
+    ##funcion que regresa lista de instrucciones que tengan solo esa altura
+    def obtenerInstruccionesTiempo(self, tiempo):
+        lista = lista_Instrucciones()
+        actual = self.primero
+        while actual != None:
+            if actual.Instruccion._tiempo == tiempo:
+                lista.insertar(actual.Instruccion)
+            actual = actual.siguiente
+        return lista
 
+    #obtener instrucciones por altura y nombre
+    def obtenerInstruccionesAlturaNombre(self, tiempo, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Instruccion._tiempo == tiempo and actual.Instruccion._nombreDron == nombre:
+                return actual.Instruccion
+            actual = actual.siguiente
+        return None
     
 
     def obtenerUltimoDron(self, nombre):
@@ -110,7 +127,16 @@ class lista_Instrucciones:
             actual = actual.siguiente
         return None
 
-    
+    #obtener instrucciones indiceSolo
+    def obtenerInstruccionIndiceSolo(self, indice):
+        actual = self.primero
+        contador = 0
+        while actual != None:
+            if contador == indice:
+                return actual.Instruccion
+            contador += 1
+            actual = actual.siguiente
+        return None
     
     def borrarTodos(self):
         self.primero = None

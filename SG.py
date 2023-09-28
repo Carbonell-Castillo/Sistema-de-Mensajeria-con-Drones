@@ -17,7 +17,11 @@ def showMenu():
         print("2. Ver sistemas")
         print("3. Ver mensajes")
         print("4. Archivo salida")
-        print("5. Salida\n")
+        print("5. Generar todas las graficas sistemas")
+        print("6. seleccionar graficas sistemas")
+        print("7. Generar todas las graficas mensajes")
+        print("8. seleccionar graficas mensajes")
+        print("9. Salida\n")
 
         try:
             option = int(input("Ingrese una opción: "))

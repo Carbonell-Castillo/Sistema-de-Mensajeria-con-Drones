@@ -1,0 +1,8 @@
+// Bruce Castillo 202203069
+digraph {
+	nodo1 [label=SDF]
+	nodo1 -> DronA
+	nodo1 -> DronW
+	nodo1 -> DronX
+	nodo1 -> DronZ
+}

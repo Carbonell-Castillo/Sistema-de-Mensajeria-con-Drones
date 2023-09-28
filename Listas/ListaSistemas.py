@@ -1,7 +1,7 @@
 
 ##importar el Sistemas que se encuentra en ../Sistemas.py
 from Sistemas import Sistemas
-
+from Arbol import *
 
 class nodo:
     def __init__(self, Sistemas=None, siguiente=None):
@@ -107,3 +107,30 @@ class lista_sistemas:
                 return actual.Sistemas._listadoDrones.actualizarAltura(nombreDron, altura)
             actual = actual.siguiente
         return "No se encontro el sistema"
+
+    ##funcion generarGrafica
+    def generarGrafica(self):
+        actual = self.primero
+        while actual != None:
+            arbol.dot.clear()
+            raiz= arbol.agregarNodo(actual.Sistemas._nombre)
+            cantidadDrones = actual.Sistemas._listadoDrones.obtenerCantidadDrones()
+            for i in range(cantidadDrones):
+                actual.Sistemas._listadoDrones.ordenarDrones()
+                arbol.agregarArista(raiz, actual.Sistemas._listadoDrones.obtenerDronPorIndice(i))
+            arbol.generarGrafica(actual.Sistemas._nombre, "png")
+            actual = actual.siguiente
+    
+    ##generar grafica por sistema
+    def generarGraficaSistema(self, nombreSistema):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                arbol.dot.clear()
+                raiz= arbol.agregarNodo(actual.Sistemas._nombre)
+                cantidadDrones = actual.Sistemas._listadoDrones.obtenerCantidadDrones()
+                for i in range(cantidadDrones):
+                    actual.Sistemas._listadoDrones.ordenarDrones()
+                    arbol.agregarArista(raiz, actual.Sistemas._listadoDrones.obtenerDronPorIndice(i))
+                arbol.generarGrafica(actual.Sistemas._nombre, "png")
+            actual = actual.siguiente
