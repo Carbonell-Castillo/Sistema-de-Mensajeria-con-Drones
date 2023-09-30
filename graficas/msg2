@@ -1,66 +1,118 @@
 // Bruce Castillo 202203069
 digraph {
-	nodo102 [label=msg2]
-	nodo103 [label="Mensaje Recibido: \nIPC2"]
-	nodo104 [label="Tiempo optimo: 5"]
+	nodo90 [label=msg2]
+	nodo91 [label="Mensaje Recibido: \nBBCITO"]
+	nodo92 [label="Tiempo optimo: 7"]
+	nodo90 -> nodo91
+	nodo91 -> nodo92
+	nodo93 [label=DronA]
+	nodo91 -> nodo93
+	nodo94 [label=Subir]
+	nodo93 -> nodo94
+	nodo95 [label=Esperar]
+	nodo94 -> nodo95
+	nodo96 [label=Esperar]
+	nodo95 -> nodo96
+	nodo97 [label="Emitir Luz"]
+	nodo96 -> nodo97
+	nodo98 [label=Espera]
+	nodo97 -> nodo98
+	nodo99 [label=Espera]
+	nodo98 -> nodo99
+	nodo100 [label=Espera]
+	nodo99 -> nodo100
+	nodo101 [label=DronF]
+	nodo91 -> nodo101
+	nodo102 [label=Subir]
+	nodo101 -> nodo102
+	nodo103 [label=Esperar]
 	nodo102 -> nodo103
+	nodo104 [label=Esperar]
 	nodo103 -> nodo104
-	nodo105 [label=DronA]
-	nodo103 -> nodo105
-	nodo106 [label=Subir]
+	nodo105 [label=Esperar]
+	nodo104 -> nodo105
+	nodo106 [label=Esperar]
 	nodo105 -> nodo106
 	nodo107 [label=Esperar]
 	nodo106 -> nodo107
-	nodo108 [label=Esperar]
+	nodo108 [label="Emitir Luz"]
 	nodo107 -> nodo108
-	nodo109 [label="Emitir Luz"]
-	nodo108 -> nodo109
-	nodo110 [label=Espera]
+	nodo109 [label=DronM]
+	nodo91 -> nodo109
+	nodo110 [label=Subir]
 	nodo109 -> nodo110
-	nodo111 [label=DronW]
-	nodo103 -> nodo111
-	nodo112 [label=Subir]
+	nodo111 [label=Esperar]
+	nodo110 -> nodo111
+	nodo112 [label=Esperar]
 	nodo111 -> nodo112
-	nodo113 [label="Emitir Luz"]
+	nodo113 [label=Esperar]
 	nodo112 -> nodo113
-	nodo114 [label=Espera]
+	nodo114 [label=Esperar]
 	nodo113 -> nodo114
-	nodo115 [label=Espera]
+	nodo115 [label="Emitir Luz"]
 	nodo114 -> nodo115
 	nodo116 [label=Espera]
 	nodo115 -> nodo116
-	nodo117 [label=DronX]
-	nodo103 -> nodo117
+	nodo117 [label=DronW]
+	nodo91 -> nodo117
 	nodo118 [label=Subir]
 	nodo117 -> nodo118
-	nodo119 [label=Esperar]
+	nodo119 [label="Emitir Luz"]
 	nodo118 -> nodo119
-	nodo120 [label="Emitir Luz"]
+	nodo120 [label=Espera]
 	nodo119 -> nodo120
 	nodo121 [label=Espera]
 	nodo120 -> nodo121
 	nodo122 [label=Espera]
 	nodo121 -> nodo122
-	nodo123 [label=DronZ]
-	nodo103 -> nodo123
-	nodo124 [label=Subir]
+	nodo123 [label=Espera]
+	nodo122 -> nodo123
+	nodo124 [label=Espera]
 	nodo123 -> nodo124
-	nodo125 [label=Esperar]
-	nodo124 -> nodo125
-	nodo126 [label=Esperar]
+	nodo125 [label=DronX]
+	nodo91 -> nodo125
+	nodo126 [label=Subir]
 	nodo125 -> nodo126
 	nodo127 [label=Esperar]
 	nodo126 -> nodo127
 	nodo128 [label="Emitir Luz"]
 	nodo127 -> nodo128
-	nodo129 [label="Tiempo: 1"]
-	nodo104 -> nodo129
-	nodo130 [label="Tiempo: 2"]
+	nodo129 [label=Espera]
+	nodo128 -> nodo129
+	nodo130 [label=Espera]
 	nodo129 -> nodo130
-	nodo131 [label="Tiempo: 3"]
+	nodo131 [label=Espera]
 	nodo130 -> nodo131
-	nodo132 [label="Tiempo: 4"]
+	nodo132 [label=Espera]
 	nodo131 -> nodo132
-	nodo133 [label="Tiempo: 5"]
-	nodo132 -> nodo133
+	nodo133 [label=DronZ]
+	nodo91 -> nodo133
+	nodo134 [label=Subir]
+	nodo133 -> nodo134
+	nodo135 [label=Esperar]
+	nodo134 -> nodo135
+	nodo136 [label=Esperar]
+	nodo135 -> nodo136
+	nodo137 [label=Esperar]
+	nodo136 -> nodo137
+	nodo138 [label="Emitir Luz"]
+	nodo137 -> nodo138
+	nodo139 [label=Espera]
+	nodo138 -> nodo139
+	nodo140 [label=Espera]
+	nodo139 -> nodo140
+	nodo141 [label="Tiempo: 1"]
+	nodo92 -> nodo141
+	nodo142 [label="Tiempo: 2"]
+	nodo141 -> nodo142
+	nodo143 [label="Tiempo: 3"]
+	nodo142 -> nodo143
+	nodo144 [label="Tiempo: 4"]
+	nodo143 -> nodo144
+	nodo145 [label="Tiempo: 5"]
+	nodo144 -> nodo145
+	nodo146 [label="Tiempo: 6"]
+	nodo145 -> nodo146
+	nodo147 [label="Tiempo: 7"]
+	nodo146 -> nodo147
 }

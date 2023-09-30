@@ -69,6 +69,15 @@ class lista_sistemas:
             actual = actual.siguiente
         return 0
     
+    ##funcion para obtener el listado de sistemas por nombre asi: ["Opción 1", "Opción 2", "Opción 3"]
+    def obtenerListadoSistemas(self):
+        actual = self.primero
+        listado = []
+        while actual != None:
+            listado.append(actual.Sistemas._nombre)
+            actual = actual.siguiente
+        return listado
+    
     ##obtener dron por indice
     def obtenerDronIndice(self, nombreSistema, indice):
         actual = self.primero
@@ -108,6 +117,8 @@ class lista_sistemas:
             actual = actual.siguiente
         return "No se encontro el sistema"
 
+
+
     ##funcion generarGrafica
     def generarGrafica(self):
         actual = self.primero
@@ -134,3 +145,14 @@ class lista_sistemas:
                     arbol.agregarArista(raiz, actual.Sistemas._listadoDrones.obtenerDronPorIndice(i))
                 arbol.generarGrafica(actual.Sistemas._nombre, "png")
             actual = actual.siguiente
+
+    ##generar grafica de los istemas que existen
+    def generarGraficaSistemas(self):
+        actual = self.primero
+        arbol.dot.clear()
+        raiz= arbol.agregarNodo("Sistemas")
+        while actual != None:    
+            arbol.agregarArista(raiz, actual.Sistemas._nombre)
+            actual = actual.siguiente
+        arbol.generarGrafica("Sistemas", "png")
+        

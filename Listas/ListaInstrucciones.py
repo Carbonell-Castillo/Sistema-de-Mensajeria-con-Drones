@@ -39,7 +39,15 @@ class lista_Instrucciones:
         print(
             "----------------------------------------------------------------------------"
         )
-
+    
+    def obtenerInstrucciones(self):
+        actual = self.primero
+        self.ordenar()
+        result = "Instrucciones: \n"        
+        while actual != None:
+            result += "T: " + str(actual.Instruccion._tiempo) + " Nombre Dron: " + str(actual.Instruccion._nombreDron) + " Estado: " + str(actual.Instruccion._estado) + "\n"
+            actual = actual.siguiente
+        return result
     ##ordenar lista por orden alfabeticod de nombreDron y por tiempo
     def ordenar(self):
         actual = self.primero
