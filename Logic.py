@@ -91,12 +91,18 @@ def leerEntrada(xml_file):
             print("Letra: ", letraEncontrada)
             ##Se comienzan a crear las instruciones
             if int(altura)> alturaInicialDron:
+                contador_tiempo = listaInstrucciones.obtenerUltimoDron(dron)
+                if contador_tiempo == None:
+                    contador_tiempo=1
+                else:
+                    contador_tiempo= contador_tiempo+1
                 for altura in range(alturaInicialDron, int(altura)):
                     alturaInicialDron= alturaInicialDron+1
                     instruccion_obj = Instruccion(contador_tiempo, dron, "Subir")                    
                     sg.list.actualizarAltura(sistemaDrones, dron, alturaInicialDron)
                     contador_tiempo=contador_tiempo+1
                     listaInstrucciones.insertar(instruccion_obj)
+
                 while listaInstrucciones.validarEstado(contador_tiempo):
                     print("Se esperaaa ", dron, " ", contador_tiempo)
                     instruccion_obj = Instruccion(contador_tiempo, dron, "Esperar")

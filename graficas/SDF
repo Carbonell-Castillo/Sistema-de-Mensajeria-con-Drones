@@ -1,8 +1,10 @@
 // Bruce Castillo 202203069
 digraph {
-	nodo1 [label=SDF]
-	nodo1 -> DronA
-	nodo1 -> DronW
-	nodo1 -> DronX
-	nodo1 -> DronZ
+	nodo4 [label=SDF]
+	nodo4 -> DronA
+	nodo4 -> DronF
+	nodo4 -> DronM
+	nodo4 -> DronW
+	nodo4 -> DronX
+	nodo4 -> DronZ
 }

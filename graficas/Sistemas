@@ -1,0 +1,6 @@
+// Bruce Castillo 202203069
+digraph {
+	nodo0 [label=Sistemas]
+	nodo0 -> SD1
+	nodo0 -> SDF
+}

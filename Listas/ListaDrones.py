@@ -22,14 +22,16 @@ class lista_drones:
 
     def recorrer(self):
         actual = self.primero
+        result = ""
         print("Drones: \n")
         print(
             "----------------------------------------------------------------------------"
         )
+        self.ordenarDrones()
         while actual != None:
+            ##concatener con el resultado
+            result = result + "Nombre: "+actual.Dron._nombre+" Altura: "+str(actual.Dron._altura)+" Estado: "+actual.Dron._estado+"\n"
             print(
-                "id: ",
-                actual.Dron._id,
                 " Nombre: ",
                 actual.Dron._nombre,
                 " Altura: ",
@@ -43,6 +45,7 @@ class lista_drones:
         print(
             "----------------------------------------------------------------------------"
         )
+        return result
     
     
     

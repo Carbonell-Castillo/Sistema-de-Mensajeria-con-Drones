@@ -20,6 +20,30 @@ class lista_Mensajes:
             actual = actual.siguiente
         actual.siguiente = nodo(Mensaje=Mensaje)
 
+    def obtenerMensajes(self):
+        actual = self.primero
+        self.ordenar()
+        result = "Mensajes: \n"+ "----------------------------------------------------------------------------\n"
+        while actual != None:
+            result = result + " Nombre: " + actual.Mensaje._nombre + " nombre Sistemas drones: " + actual.Mensaje._nombreSistemaDrones + " tiempo optimo: " + str(actual.Mensaje._tiempoOptimo) + " mensaje recibido: " + actual.Mensaje._mensajeRecibido + "\n"
+            if actual.Mensaje._instrucciones != None:
+                actual.Mensaje._instrucciones.ordenar()
+                result = result + actual.Mensaje._instrucciones.obtenerInstrucciones()
+            actual = actual.siguiente
+        result = result + "----------------------------------------------------------------------------\n"
+        return result
+    
+    #funcion para obtener listado de mensajes  []
+    def obtenerListadoMensajes(self):
+        actual = self.primero
+        self.ordenar()
+        result = []
+        while actual != None:
+            result.append(actual.Mensaje._nombre)
+            actual = actual.siguiente
+        return result
+
+
     def recorrer(self):
         actual = self.primero
         print("Mensajes: \n")
@@ -45,7 +69,6 @@ class lista_Mensajes:
             "----------------------------------------------------------------------------"
         )
 
-
     def validarNombre(self, nombre):
         actual = self.primero
         while actual != None:
@@ -53,6 +76,7 @@ class lista_Mensajes:
                 return True
             actual = actual.siguiente
         return False
+    
     #obtenerCantidadMensajes
     def obtenerCantidadMensajes(self):
         actual = self.primero
@@ -72,6 +96,19 @@ class lista_Mensajes:
             contador = contador + 1
             actual = actual.siguiente
         return None
+
+    ##ordenar por nombre del mnensaje
+    def ordenar(self):
+        actual = self.primero
+        while actual != None:
+            siguiente = actual.siguiente
+            while siguiente != None:
+                if actual.Mensaje._nombre > siguiente.Mensaje._nombre:
+                    temporal = actual.Mensaje
+                    actual.Mensaje = siguiente.Mensaje
+                    siguiente.Mensaje = temporal
+                siguiente = siguiente.siguiente
+            actual = actual.siguiente
 
     ##graficar instrucciones
     def generarGrafica(self):

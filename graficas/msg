@@ -1,70 +1,182 @@
 // Bruce Castillo 202203069
 digraph {
-	nodo68 [label=msg]
-	nodo69 [label="Mensaje Recibido: \nIPC2"]
-	nodo70 [label="Tiempo optimo: 7"]
-	nodo68 -> nodo69
+	nodo0 [label=msg]
+	nodo1 [label="Mensaje Recibido: \nBRUCE EL PAPI"]
+	nodo2 [label="Tiempo optimo: 21"]
+	nodo0 -> nodo1
+	nodo1 -> nodo2
+	nodo3 [label=DronX]
+	nodo1 -> nodo3
+	nodo4 [label=Subir]
+	nodo3 -> nodo4
+	nodo5 [label=Subir]
+	nodo4 -> nodo5
+	nodo6 [label=Subir]
+	nodo5 -> nodo6
+	nodo7 [label=Subir]
+	nodo6 -> nodo7
+	nodo8 [label="Emitir Luz"]
+	nodo7 -> nodo8
+	nodo9 [label=Bajar]
+	nodo8 -> nodo9
+	nodo10 [label="Emitir Luz"]
+	nodo9 -> nodo10
+	nodo11 [label=Subir]
+	nodo10 -> nodo11
+	nodo12 [label=Subir]
+	nodo11 -> nodo12
+	nodo13 [label=Subir]
+	nodo12 -> nodo13
+	nodo14 [label=Subir]
+	nodo13 -> nodo14
+	nodo15 [label="Emitir Luz"]
+	nodo14 -> nodo15
+	nodo16 [label=Bajar]
+	nodo15 -> nodo16
+	nodo17 [label=Bajar]
+	nodo16 -> nodo17
+	nodo18 [label=Bajar]
+	nodo17 -> nodo18
+	nodo19 [label=Bajar]
+	nodo18 -> nodo19
+	nodo20 [label="Emitir Luz"]
+	nodo19 -> nodo20
+	nodo21 [label=Subir]
+	nodo20 -> nodo21
+	nodo22 [label=Subir]
+	nodo21 -> nodo22
+	nodo23 [label=Subir]
+	nodo22 -> nodo23
+	nodo24 [label="Emitir Luz"]
+	nodo23 -> nodo24
+	nodo25 [label=DronY]
+	nodo1 -> nodo25
+	nodo26 [label=Subir]
+	nodo25 -> nodo26
+	nodo27 [label=Subir]
+	nodo26 -> nodo27
+	nodo28 [label=Subir]
+	nodo27 -> nodo28
+	nodo29 [label=Subir]
+	nodo28 -> nodo29
+	nodo30 [label=Subir]
+	nodo29 -> nodo30
+	nodo31 [label=Subir]
+	nodo30 -> nodo31
+	nodo32 [label=Subir]
+	nodo31 -> nodo32
+	nodo33 [label="Emitir Luz"]
+	nodo32 -> nodo33
+	nodo34 [label=Bajar]
+	nodo33 -> nodo34
+	nodo35 [label=Bajar]
+	nodo34 -> nodo35
+	nodo36 [label=Bajar]
+	nodo35 -> nodo36
+	nodo37 [label=Bajar]
+	nodo36 -> nodo37
+	nodo38 [label=Bajar]
+	nodo37 -> nodo38
+	nodo39 [label="Emitir Luz"]
+	nodo38 -> nodo39
+	nodo40 [label=Subir]
+	nodo39 -> nodo40
+	nodo41 [label=Subir]
+	nodo40 -> nodo41
+	nodo42 [label=Subir]
+	nodo41 -> nodo42
+	nodo43 [label="Emitir Luz"]
+	nodo42 -> nodo43
+	nodo44 [label=Bajar]
+	nodo43 -> nodo44
+	nodo45 [label="Emitir Luz"]
+	nodo44 -> nodo45
+	nodo46 [label=Espera]
+	nodo45 -> nodo46
+	nodo47 [label=DronZ]
+	nodo1 -> nodo47
+	nodo48 [label=Subir]
+	nodo47 -> nodo48
+	nodo49 [label=Subir]
+	nodo48 -> nodo49
+	nodo50 [label="Emitir Luz"]
+	nodo49 -> nodo50
+	nodo51 [label=Subir]
+	nodo50 -> nodo51
+	nodo52 [label=Esperar]
+	nodo51 -> nodo52
+	nodo53 [label="Emitir Luz"]
+	nodo52 -> nodo53
+	nodo54 [label=Subir]
+	nodo53 -> nodo54
+	nodo55 [label=Subir]
+	nodo54 -> nodo55
+	nodo56 [label=Subir]
+	nodo55 -> nodo56
+	nodo57 [label=Subir]
+	nodo56 -> nodo57
+	nodo58 [label="Emitir Luz"]
+	nodo57 -> nodo58
+	nodo59 [label=Espera]
+	nodo58 -> nodo59
+	nodo60 [label=Espera]
+	nodo59 -> nodo60
+	nodo61 [label=Espera]
+	nodo60 -> nodo61
+	nodo62 [label=Espera]
+	nodo61 -> nodo62
+	nodo63 [label=Espera]
+	nodo62 -> nodo63
+	nodo64 [label=Espera]
+	nodo63 -> nodo64
+	nodo65 [label=Espera]
+	nodo64 -> nodo65
+	nodo66 [label=Espera]
+	nodo65 -> nodo66
+	nodo67 [label=Espera]
+	nodo66 -> nodo67
+	nodo68 [label=Espera]
+	nodo67 -> nodo68
+	nodo69 [label="Tiempo: 1"]
+	nodo2 -> nodo69
+	nodo70 [label="Tiempo: 2"]
 	nodo69 -> nodo70
-	nodo71 [label=DronX]
-	nodo69 -> nodo71
-	nodo72 [label=Subir]
+	nodo71 [label="Tiempo: 3"]
+	nodo70 -> nodo71
+	nodo72 [label="Tiempo: 4"]
 	nodo71 -> nodo72
-	nodo73 [label=Subir]
+	nodo73 [label="Tiempo: 5"]
 	nodo72 -> nodo73
-	nodo74 [label="Emitir Luz"]
+	nodo74 [label="Tiempo: 6"]
 	nodo73 -> nodo74
-	nodo75 [label=Espera]
+	nodo75 [label="Tiempo: 7"]
 	nodo74 -> nodo75
-	nodo76 [label=Espera]
+	nodo76 [label="Tiempo: 8"]
 	nodo75 -> nodo76
-	nodo77 [label=Espera]
+	nodo77 [label="Tiempo: 9"]
 	nodo76 -> nodo77
-	nodo78 [label=Espera]
+	nodo78 [label="Tiempo: 10"]
 	nodo77 -> nodo78
-	nodo79 [label=DronY]
-	nodo69 -> nodo79
-	nodo80 [label=Subir]
+	nodo79 [label="Tiempo: 11"]
+	nodo78 -> nodo79
+	nodo80 [label="Tiempo: 12"]
 	nodo79 -> nodo80
-	nodo81 [label=Subir]
+	nodo81 [label="Tiempo: 13"]
 	nodo80 -> nodo81
-	nodo82 [label=Subir]
+	nodo82 [label="Tiempo: 14"]
 	nodo81 -> nodo82
-	nodo83 [label="Emitir Luz"]
+	nodo83 [label="Tiempo: 15"]
 	nodo82 -> nodo83
-	nodo84 [label=Bajar]
+	nodo84 [label="Tiempo: 16"]
 	nodo83 -> nodo84
-	nodo85 [label=Bajar]
+	nodo85 [label="Tiempo: 17"]
 	nodo84 -> nodo85
-	nodo86 [label="Emitir Luz"]
+	nodo86 [label="Tiempo: 18"]
 	nodo85 -> nodo86
-	nodo87 [label=DronZ]
-	nodo69 -> nodo87
-	nodo88 [label=Subir]
+	nodo87 [label="Tiempo: 19"]
+	nodo86 -> nodo87
+	nodo88 [label="Tiempo: 20"]
 	nodo87 -> nodo88
-	nodo89 [label=Subir]
+	nodo89 [label="Tiempo: 21"]
 	nodo88 -> nodo89
-	nodo90 [label=Esperar]
-	nodo89 -> nodo90
-	nodo91 [label=Esperar]
-	nodo90 -> nodo91
-	nodo92 [label="Emitir Luz"]
-	nodo91 -> nodo92
-	nodo93 [label=Espera]
-	nodo92 -> nodo93
-	nodo94 [label=Espera]
-	nodo93 -> nodo94
-	nodo95 [label="Tiempo: 1"]
-	nodo70 -> nodo95
-	nodo96 [label="Tiempo: 2"]
-	nodo95 -> nodo96
-	nodo97 [label="Tiempo: 3"]
-	nodo96 -> nodo97
-	nodo98 [label="Tiempo: 4"]
-	nodo97 -> nodo98
-	nodo99 [label="Tiempo: 5"]
-	nodo98 -> nodo99
-	nodo100 [label="Tiempo: 6"]
-	nodo99 -> nodo100
-	nodo101 [label="Tiempo: 7"]
-	nodo100 -> nodo101
 }
