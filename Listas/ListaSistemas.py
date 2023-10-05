@@ -118,7 +118,16 @@ class lista_sistemas:
         return "No se encontro el sistema"
 
 
-
+    ##actualizar sistema por nombre
+    def actualizarSistema(self, nombreSistema, nombre, alturaMaxima, cantidadDrones, listadoDrones):
+        actual = self.primero
+        while actual != None:
+            if actual.Sistemas._nombre == nombreSistema:
+                actual.Sistemas._nombre = nombre
+                actual.Sistemas._alturaMaxima = alturaMaxima
+                actual.Sistemas._cantidadDrones = cantidadDrones
+                actual.Sistemas._listadoDrones = listadoDrones
+            actual = actual.siguiente
     ##funcion generarGrafica
     def generarGrafica(self):
         actual = self.primero

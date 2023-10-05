@@ -227,3 +227,78 @@ class lista_Mensajes:
                         nodoTiempoAnterior = nodoTiempo
                     arbol.generarGrafica(actual.Mensaje._nombre, "png")
             actual = actual.siguiente
+
+#validar si el nombre existe
+    def validarNombre(self, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Mensaje._nombre == nombre:
+                return True
+            actual = actual.siguiente
+        return False
+
+    #obtener mensaje por nombre
+    def obtenerMensajeNombre(self, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Mensaje._nombre == nombre:
+                return actual.Mensaje
+            actual = actual.siguiente
+        return None
+
+    #borrar mensaje por nombre
+    def borrarMensajeNombre(self, nombre):
+        actual = self.primero
+        if actual.Mensaje._nombre == nombre:
+            self.primero = actual.siguiente
+            return True
+        else:
+            while actual.siguiente != None:
+                if actual.siguiente.Mensaje._nombre == nombre:
+                    actual.siguiente = actual.siguiente.siguiente
+                    return True
+                actual = actual.siguiente
+            return False
+
+    #obtener mensaje por nombre
+    def obtenerMensajeNombre(self, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Mensaje._nombre == nombre:
+                return actual.Mensaje
+            actual = actual.siguiente
+        return None
+
+    #borrar mensaje por nombre
+    def borrarMensajeNombre(self, nombre):
+        actual = self.primero
+        if actual.Mensaje._nombre == nombre:
+            self.primero = actual.siguiente
+            return True
+        else:
+            while actual.siguiente != None:
+                if actual.siguiente.Mensaje._nombre == nombre:
+                    actual.siguiente = actual.siguiente.siguiente
+                    return True
+                actual = actual.siguiente
+            return False
+
+    #obtener mensaje por nombre
+    def obtenerMensajeNombre(self, nombre):
+        actual = self.primero
+        while actual != None:
+            if actual.Mensaje._nombre == nombre:
+                return actual.Mensaje
+            actual = actual.siguiente
+        return None
+
+    #borrar mensaje por nombre
+    def borrarMensajeNombre(self, nombre):
+        actual = self.primero
+        if actual.Mensaje._nombre == nombre:
+            self.primero = actual.siguiente
+            return True
+        else:
+            while actual.siguiente != None:
+                if actual.siguiente.Mensaje._nombre == nombre:
+                    actual.siguiente = actual.s
