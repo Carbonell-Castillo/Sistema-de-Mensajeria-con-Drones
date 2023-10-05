@@ -1,3 +1,4 @@
+from tkinter import filedialog, messagebox
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from Dron import Dron
@@ -21,15 +22,17 @@ def leerEntrada(xml_file):
     generarListaDrones(xml_file)
     
     
-
+    actualizar_sistema=False
     for sistemaDrones in root.findall(".//sistemaDrones"):
         listaDrones = lista_drones.lista_drones().borrarTodos()     
         listaDrones= lista_drones.lista_drones()
         if sg.list != None:
             if sg.list.validarNombre(sistemaDrones.get("nombre")):
                 print("Sistema ya existe")
+                messagebox.showwarning  ("Aviso", "El sistema: "+sistemaDrones.get("nombre")+" ya existe, se actualizara el sistema")
                 print()
-                continue
+                actualizar_sistema=True
+                # continue
         nombre = sistemaDrones.get("nombre")
         alturaMaxima_elem = sistemaDrones.find("alturaMaxima")
         cantidadDrones_elem = sistemaDrones.find("cantidadDrones")
@@ -37,13 +40,38 @@ def leerEntrada(xml_file):
         if alturaMaxima_elem is not None and cantidadDrones_elem is not None:
             alturaMaxima = sistemaDrones.find("alturaMaxima").text
             cantidadDrones = sistemaDrones.find("cantidadDrones").text
-        
+            if int(cantidadDrones) >200:
+                print("La cantidad de drones excede el limite")
+                messagebox.showwarning("Aviso", "La cantidad de drones excede el limite11")
+            elif int(cantidadDrones) < 1:
+                print("La cantidad de drones es menor a 1")
+                messagebox.showwarning("Aviso", "La cantidad de drones es menor a 1")
+                continue
+            if int(alturaMaxima) > 100:
+                print("La altura maxima excede el limite")
+                messagebox.showwarning("Aviso", "La altura maxima excede el limite")
+            elif int(alturaMaxima) < 1:
+                print("La altura maxima es menor a 1")
+                messagebox.showwarning("Aviso", "La altura maxima es menor a 1")
+                continue
+            cantidadDronValidacion=0
+            cantidadAlturaValidacion =0
             for contenido in sistemaDrones.findall("contenido"):
+                cantidadDronValidacion=cantidadDronValidacion+1
                 listaAlturas= lista_alturas.lista_Alturas().borrarTodos()
                 listaAlturas = lista_alturas.lista_Alturas()
                 dron = contenido.find("dron").text
+                if cantidadDronValidacion > int(cantidadDrones):
+                    print("La cantidad de drones excede la cantidad de drones en el sistema")
+                    messagebox.showwarning("Aviso", "La cantidad de drones excede la cantidad de drones en el sistema")
+                    break
                 if sg.listDrones.validarNombre(dron):
                     for altura in contenido.findall(".//altura"):
+                        # cantidadAlturaValidacion=cantidadAlturaValidacion+1
+                        # if cantidadAlturaValidacion < int(alturaMaxima):
+                        #     print("La cantidad de alturas excede la altura maxima del sistema")
+                        #     messagebox.showwarning("Aviso", "La cantidad de alturas excede la altura maxima del sistema")
+                        #     break
                         #Se valida que el valor de la altura sea menor o igual que la altura mayor
                         if int(altura.attrib["valor"]) <= int(alturaMaxima):
                             ##valida que la altura no sea "" en caso contrario que agregue " "
@@ -64,7 +92,11 @@ def leerEntrada(xml_file):
                     print()
             print()
             sistema_obj= Sistemas(nombre, alturaMaxima, cantidadDrones, listaDrones)
-            sg.list.insertar(sistema_obj)
+            if actualizar_sistema:
+                sg.list.actualizarSistema(nombre, nombre, alturaMaxima, cantidadDrones, listaDrones)
+                messagebox.showinfo("Aviso", "El sistema se actulizo correctamente")
+            else:
+                sg.list.insertar(sistema_obj)
 
             
 
@@ -145,7 +177,13 @@ def leerEntrada(xml_file):
                     instruccion_obj = Instruccion(ultimo_tiempo_dron, nombre_dron_encontrado, "Espera")
                     listaInstrucciones.insertar(instruccion_obj)
                     
-        
+        ##valida el nombre y en el caso de que ya existe se cambia el nomre agregando un numero
+        if sg.listMensajes is not None:
+            if sg.listMensajes.validarNombre(nombre):
+                contador=1
+                while sg.listMensajes.validarNombre(nombre+"("+str(contador)+")"):
+                    contador=contador+1
+                nombre=nombre+"("+str(contador)+")"
         mensaje_obj = Mensaje(nombre, sistemaDrones, tiempo_mayor, mensaje_resultado, listaInstrucciones)
         sg.listMensajes.insertar(mensaje_obj)
         print(f"Mensaje: {nombre}")

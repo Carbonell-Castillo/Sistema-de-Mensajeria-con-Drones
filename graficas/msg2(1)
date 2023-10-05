@@ -1,0 +1,118 @@
+// Bruce Castillo 202203069
+digraph {
+	nodo371 [label="msg2(1)"]
+	nodo372 [label="Mensaje Recibido: \nBBCITO"]
+	nodo373 [label="Tiempo optimo: 7"]
+	nodo371 -> nodo372
+	nodo372 -> nodo373
+	nodo374 [label=DronA]
+	nodo372 -> nodo374
+	nodo375 [label=Subir]
+	nodo374 -> nodo375
+	nodo376 [label=Esperar]
+	nodo375 -> nodo376
+	nodo377 [label=Esperar]
+	nodo376 -> nodo377
+	nodo378 [label="Emitir Luz"]
+	nodo377 -> nodo378
+	nodo379 [label=Espera]
+	nodo378 -> nodo379
+	nodo380 [label=Espera]
+	nodo379 -> nodo380
+	nodo381 [label=Espera]
+	nodo380 -> nodo381
+	nodo382 [label=DronF]
+	nodo372 -> nodo382
+	nodo383 [label=Subir]
+	nodo382 -> nodo383
+	nodo384 [label=Esperar]
+	nodo383 -> nodo384
+	nodo385 [label=Esperar]
+	nodo384 -> nodo385
+	nodo386 [label=Esperar]
+	nodo385 -> nodo386
+	nodo387 [label=Esperar]
+	nodo386 -> nodo387
+	nodo388 [label=Esperar]
+	nodo387 -> nodo388
+	nodo389 [label="Emitir Luz"]
+	nodo388 -> nodo389
+	nodo390 [label=DronM]
+	nodo372 -> nodo390
+	nodo391 [label=Subir]
+	nodo390 -> nodo391
+	nodo392 [label=Esperar]
+	nodo391 -> nodo392
+	nodo393 [label=Esperar]
+	nodo392 -> nodo393
+	nodo394 [label=Esperar]
+	nodo393 -> nodo394
+	nodo395 [label=Esperar]
+	nodo394 -> nodo395
+	nodo396 [label="Emitir Luz"]
+	nodo395 -> nodo396
+	nodo397 [label=Espera]
+	nodo396 -> nodo397
+	nodo398 [label=DronW]
+	nodo372 -> nodo398
+	nodo399 [label=Subir]
+	nodo398 -> nodo399
+	nodo400 [label="Emitir Luz"]
+	nodo399 -> nodo400
+	nodo401 [label=Espera]
+	nodo400 -> nodo401
+	nodo402 [label=Espera]
+	nodo401 -> nodo402
+	nodo403 [label=Espera]
+	nodo402 -> nodo403
+	nodo404 [label=Espera]
+	nodo403 -> nodo404
+	nodo405 [label=Espera]
+	nodo404 -> nodo405
+	nodo406 [label=DronX]
+	nodo372 -> nodo406
+	nodo407 [label=Subir]
+	nodo406 -> nodo407
+	nodo408 [label=Esperar]
+	nodo407 -> nodo408
+	nodo409 [label="Emitir Luz"]
+	nodo408 -> nodo409
+	nodo410 [label=Espera]
+	nodo409 -> nodo410
+	nodo411 [label=Espera]
+	nodo410 -> nodo411
+	nodo412 [label=Espera]
+	nodo411 -> nodo412
+	nodo413 [label=Espera]
+	nodo412 -> nodo413
+	nodo414 [label=DronZ]
+	nodo372 -> nodo414
+	nodo415 [label=Subir]
+	nodo414 -> nodo415
+	nodo416 [label=Esperar]
+	nodo415 -> nodo416
+	nodo417 [label=Esperar]
+	nodo416 -> nodo417
+	nodo418 [label=Esperar]
+	nodo417 -> nodo418
+	nodo419 [label="Emitir Luz"]
+	nodo418 -> nodo419
+	nodo420 [label=Espera]
+	nodo419 -> nodo420
+	nodo421 [label=Espera]
+	nodo420 -> nodo421
+	nodo422 [label="Tiempo: 1"]
+	nodo373 -> nodo422
+	nodo423 [label="Tiempo: 2"]
+	nodo422 -> nodo423
+	nodo424 [label="Tiempo: 3"]
+	nodo423 -> nodo424
+	nodo425 [label="Tiempo: 4"]
+	nodo424 -> nodo425
+	nodo426 [label="Tiempo: 5"]
+	nodo425 -> nodo426
+	nodo427 [label="Tiempo: 6"]
+	nodo426 -> nodo427
+	nodo428 [label="Tiempo: 7"]
+	nodo427 -> nodo428
+}

@@ -30,7 +30,7 @@ class lista_drones:
         self.ordenarDrones()
         while actual != None:
             ##concatener con el resultado
-            result = result + "Nombre: "+actual.Dron._nombre+" Altura: "+str(actual.Dron._altura)+" Estado: "+actual.Dron._estado+"\n"
+            result = result + "Nombre: "+actual.Dron._nombre+"\n"
             print(
                 " Nombre: ",
                 actual.Dron._nombre,

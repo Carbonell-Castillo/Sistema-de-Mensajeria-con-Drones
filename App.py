@@ -1,3 +1,4 @@
+import webbrowser
 import tkinter as tk
 from tkinter import *
 from tkinter import filedialog, messagebox
@@ -55,7 +56,7 @@ class MainWindow:
         file_menu.add_command(label="Guardar listado de mensajes TXT", command=self.guardar_listado)
 
 
-        menu_bar.add_cascade(label="Ayuda")
+        menu_bar.add_cascade(label="Ayuda", command=self.ayuda)
 
     #funcion que inicializa el sistema es decir que limpia todas las litas
     def inicializar(self):
@@ -211,6 +212,12 @@ class MainWindow:
             except Exception as e:
                 messagebox.showerror("Error", f"No se pudo abrir la imagen: {str(e)}")
     
+    #crear una funcion que se llame ayuda y que muestre un mensaje en la pantalla que diga Bruce Castilo y que luego abra el siguiente link https://github.com/Carbonell-Castillo/IPC2_Proyecto2_202203069
+    def ayuda(self):
+        messagebox.showinfo("Ayuda", "Bruce Carbonell Castillo Cifuentes \n202203069 \nIPC2N")
+        url= "https://github.com/Carbonell-Castillo/IPC2_Proyecto2_202203069"
+        webbrowser.open_new(url)
+                            
 if __name__ == "__main__":
     root = tk.Tk()
     app = MainWindow(root)

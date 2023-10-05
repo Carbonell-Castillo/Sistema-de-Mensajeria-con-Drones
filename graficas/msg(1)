@@ -1,0 +1,182 @@
+// Bruce Castillo 202203069
+digraph {
+	nodo249 [label="msg(1)"]
+	nodo250 [label="Mensaje Recibido: \nBRUCE EL PAPI"]
+	nodo251 [label="Tiempo optimo: 21"]
+	nodo249 -> nodo250
+	nodo250 -> nodo251
+	nodo252 [label=DronX]
+	nodo250 -> nodo252
+	nodo253 [label=Subir]
+	nodo252 -> nodo253
+	nodo254 [label=Subir]
+	nodo253 -> nodo254
+	nodo255 [label=Subir]
+	nodo254 -> nodo255
+	nodo256 [label=Subir]
+	nodo255 -> nodo256
+	nodo257 [label="Emitir Luz"]
+	nodo256 -> nodo257
+	nodo258 [label=Bajar]
+	nodo257 -> nodo258
+	nodo259 [label="Emitir Luz"]
+	nodo258 -> nodo259
+	nodo260 [label=Subir]
+	nodo259 -> nodo260
+	nodo261 [label=Subir]
+	nodo260 -> nodo261
+	nodo262 [label=Subir]
+	nodo261 -> nodo262
+	nodo263 [label=Subir]
+	nodo262 -> nodo263
+	nodo264 [label="Emitir Luz"]
+	nodo263 -> nodo264
+	nodo265 [label=Bajar]
+	nodo264 -> nodo265
+	nodo266 [label=Bajar]
+	nodo265 -> nodo266
+	nodo267 [label=Bajar]
+	nodo266 -> nodo267
+	nodo268 [label=Bajar]
+	nodo267 -> nodo268
+	nodo269 [label="Emitir Luz"]
+	nodo268 -> nodo269
+	nodo270 [label=Subir]
+	nodo269 -> nodo270
+	nodo271 [label=Subir]
+	nodo270 -> nodo271
+	nodo272 [label=Subir]
+	nodo271 -> nodo272
+	nodo273 [label="Emitir Luz"]
+	nodo272 -> nodo273
+	nodo274 [label=DronY]
+	nodo250 -> nodo274
+	nodo275 [label=Subir]
+	nodo274 -> nodo275
+	nodo276 [label=Subir]
+	nodo275 -> nodo276
+	nodo277 [label=Subir]
+	nodo276 -> nodo277
+	nodo278 [label=Subir]
+	nodo277 -> nodo278
+	nodo279 [label=Subir]
+	nodo278 -> nodo279
+	nodo280 [label=Subir]
+	nodo279 -> nodo280
+	nodo281 [label=Subir]
+	nodo280 -> nodo281
+	nodo282 [label="Emitir Luz"]
+	nodo281 -> nodo282
+	nodo283 [label=Bajar]
+	nodo282 -> nodo283
+	nodo284 [label=Bajar]
+	nodo283 -> nodo284
+	nodo285 [label=Bajar]
+	nodo284 -> nodo285
+	nodo286 [label=Bajar]
+	nodo285 -> nodo286
+	nodo287 [label=Bajar]
+	nodo286 -> nodo287
+	nodo288 [label="Emitir Luz"]
+	nodo287 -> nodo288
+	nodo289 [label=Subir]
+	nodo288 -> nodo289
+	nodo290 [label=Subir]
+	nodo289 -> nodo290
+	nodo291 [label=Subir]
+	nodo290 -> nodo291
+	nodo292 [label="Emitir Luz"]
+	nodo291 -> nodo292
+	nodo293 [label=Bajar]
+	nodo292 -> nodo293
+	nodo294 [label="Emitir Luz"]
+	nodo293 -> nodo294
+	nodo295 [label=Espera]
+	nodo294 -> nodo295
+	nodo296 [label=DronZ]
+	nodo250 -> nodo296
+	nodo297 [label=Subir]
+	nodo296 -> nodo297
+	nodo298 [label=Subir]
+	nodo297 -> nodo298
+	nodo299 [label="Emitir Luz"]
+	nodo298 -> nodo299
+	nodo300 [label=Subir]
+	nodo299 -> nodo300
+	nodo301 [label=Esperar]
+	nodo300 -> nodo301
+	nodo302 [label="Emitir Luz"]
+	nodo301 -> nodo302
+	nodo303 [label=Subir]
+	nodo302 -> nodo303
+	nodo304 [label=Subir]
+	nodo303 -> nodo304
+	nodo305 [label=Subir]
+	nodo304 -> nodo305
+	nodo306 [label=Subir]
+	nodo305 -> nodo306
+	nodo307 [label="Emitir Luz"]
+	nodo306 -> nodo307
+	nodo308 [label=Espera]
+	nodo307 -> nodo308
+	nodo309 [label=Espera]
+	nodo308 -> nodo309
+	nodo310 [label=Espera]
+	nodo309 -> nodo310
+	nodo311 [label=Espera]
+	nodo310 -> nodo311
+	nodo312 [label=Espera]
+	nodo311 -> nodo312
+	nodo313 [label=Espera]
+	nodo312 -> nodo313
+	nodo314 [label=Espera]
+	nodo313 -> nodo314
+	nodo315 [label=Espera]
+	nodo314 -> nodo315
+	nodo316 [label=Espera]
+	nodo315 -> nodo316
+	nodo317 [label=Espera]
+	nodo316 -> nodo317
+	nodo318 [label="Tiempo: 1"]
+	nodo251 -> nodo318
+	nodo319 [label="Tiempo: 2"]
+	nodo318 -> nodo319
+	nodo320 [label="Tiempo: 3"]
+	nodo319 -> nodo320
+	nodo321 [label="Tiempo: 4"]
+	nodo320 -> nodo321
+	nodo322 [label="Tiempo: 5"]
+	nodo321 -> nodo322
+	nodo323 [label="Tiempo: 6"]
+	nodo322 -> nodo323
+	nodo324 [label="Tiempo: 7"]
+	nodo323 -> nodo324
+	nodo325 [label="Tiempo: 8"]
+	nodo324 -> nodo325
+	nodo326 [label="Tiempo: 9"]
+	nodo325 -> nodo326
+	nodo327 [label="Tiempo: 10"]
+	nodo326 -> nodo327
+	nodo328 [label="Tiempo: 11"]
+	nodo327 -> nodo328
+	nodo329 [label="Tiempo: 12"]
+	nodo328 -> nodo329
+	nodo330 [label="Tiempo: 13"]
+	nodo329 -> nodo330
+	nodo331 [label="Tiempo: 14"]
+	nodo330 -> nodo331
+	nodo332 [label="Tiempo: 15"]
+	nodo331 -> nodo332
+	nodo333 [label="Tiempo: 16"]
+	nodo332 -> nodo333
+	nodo334 [label="Tiempo: 17"]
+	nodo333 -> nodo334
+	nodo335 [label="Tiempo: 18"]
+	nodo334 -> nodo335
+	nodo336 [label="Tiempo: 19"]
+	nodo335 -> nodo336
+	nodo337 [label="Tiempo: 20"]
+	nodo336 -> nodo337
+	nodo338 [label="Tiempo: 21"]
+	nodo337 -> nodo338
+}
